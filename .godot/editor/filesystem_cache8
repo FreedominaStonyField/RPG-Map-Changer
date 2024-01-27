@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706376392
+::res://::1706376907
 icon.svg::CompressedTexture2D::3991330705475184425::1706376268::1706376278::1::::<><>::
+README.md::TextFile::-1::1706376511::0::1::::<><>::
 ::res://addons/::1706376328
 ::res://addons/godot-git-plugin/::1706376329
 git_plugin.gdextension::GDExtension::-1::1706376328::0::1::::<><>::
@@ -10,3 +11,6 @@ THIRDPARTY.md::TextFile::-1::1706376329::0::1::::<><>::
 ::res://addons/godot-git-plugin/macos/::1706376328
 ::res://addons/godot-git-plugin/win64/::1706376385
 ::res://autoloads/::1706376340
+::res://player/::1706377068
+character_controler.tscn::PackedScene::5356625853503410712::1706377068::0::1::::<><>::res://player/player.gd
+player.gd::GDScript::-1::1706376774::0::1::::<>CharacterBody3D<>::
