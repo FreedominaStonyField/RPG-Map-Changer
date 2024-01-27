@@ -1,16 +1,58 @@
-[gd_scene format=3 uid="uid://d32d1poc2hxu4"]
+[gd_scene load_steps=7 format=3 uid="uid://d32d1poc2hxu4"]
+
+[ext_resource type="PackedScene" uid="uid://cl5u0yvi747r7" path="res://spawn_point.tscn" id="1_qcb7u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p6pwn"]
+sky_top_color = Color(0.435294, 0.701961, 0.956863, 1)
+sky_horizon_color = Color(0.717647, 0.85098, 0.978431, 1)
+ground_bottom_color = Color(0.435294, 0.701961, 0.956863, 1)
+ground_horizon_color = Color(0.717647, 0.85098, 0.978431, 1)
+
+[sub_resource type="Sky" id="Sky_rpcwx"]
+sky_material = SubResource("ProceduralSkyMaterial_p6pwn")
+
+[sub_resource type="Environment" id="Environment_uwyyv"]
+background_mode = 2
+sky = SubResource("Sky_rpcwx")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4md0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbdcn"]
+albedo_color = Color(1, 0.337255, 0.392157, 1)
 
 [node name="StartingTownMap" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.5, -0.53793, 0.678698, 0, 0.783693, 0.621148, -0.866025, 0.310574, -0.391847, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uwyyv")
 
 [node name="Building" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.03836, 0)
 size = Vector3(10, 5, 20)
+material = SubResource("StandardMaterial3D_k4md0")
 
 [node name="Entince" type="CSGBox3D" parent="Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.49859, 9.46503)
 operation = 2
 size = Vector3(3, 2, 3)
+material = SubResource("StandardMaterial3D_dbdcn")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Building/Entince"]
+light_energy = 0.1
+light_negative = true
+omni_range = 3.0
 
 [node name="Ground" type="CSGBox3D" parent="."]
 use_collision = true
 size = Vector3(200, 1, 200)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.750757, 0, 0.660578, 0, 1, 0, -0.660578, 0, 0.750757, 13.1397, 3.63964, 15.1137)
+
+[node name="SpawnPoint" parent="." instance=ExtResource("1_qcb7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.84627, 10.9563)

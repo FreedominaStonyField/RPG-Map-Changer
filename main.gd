@@ -9,3 +9,4 @@ func _ready():
 func start_game():
 	$MainMenu.queue_free()
 	MapLoader.load_map(starting_map)
+	add_child(preload("res://player/character_controler.tscn").instantiate())

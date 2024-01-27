@@ -1,7 +1,9 @@
+CSGMesh3D
+OmniLight3D
+Camera3D
 Node
 Button
 CSGBox3D
 BoxContainer
-Camera3D
 CollisionShape3D
 CharacterBody3D
