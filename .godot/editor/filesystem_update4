@@ -1,2 +1,4 @@
 res://player/character_body_3d.tscn
 res://player/character_controler.tscn
+res://maps/starting_town_map.tscn
+res://maps/store_interior_map.tscn

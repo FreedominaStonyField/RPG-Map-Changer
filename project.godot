@@ -14,6 +14,10 @@ config/name="RPG Map Changer"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MapLoader="*res://autoloads/map_loader.gd"
+
 [input]
 
 ui_left={

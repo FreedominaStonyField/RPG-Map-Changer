@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b7su1qnprrp6u"]
+
+[node name="StoreInteriorMap" type="Node3D"]
+
+[node name="Room" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(100.5, 4, 100.5)
+
+[node name="Room" type="CSGBox3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+operation = 2
+size = Vector3(100, 3, 100)
