@@ -8,3 +8,4 @@ res://MainMenu.tscn
 res://autoloads/map_loader.gd
 res://spawn_point.tscn
 res://spawn_point.gd
+res://autoloads/player_manager.gd
